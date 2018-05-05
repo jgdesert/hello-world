@@ -1,4 +1,10 @@
 type Application {
   _id: String
   name: String
+  mongodb: Mongo
+}
+
+type Mongo {
+  _id: String
+  name: String
 }

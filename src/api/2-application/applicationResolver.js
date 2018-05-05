@@ -7,6 +7,16 @@ export default {
             name: "My first Id"
           }
         );
-      },
-  }
+      }
+  },
+  Application: {
+    mongodb(){
+      return (
+              {
+                _id: "etdge546dgw54",
+                name: "Mongo Data"
+              }
+            );
+    },
+  },
 }

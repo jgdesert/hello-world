@@ -1,3 +1,4 @@
+//All <h1> is an exercices
 import React , { Component } from 'react';
 import gql from 'graphql-tag';
 import PropTypes from 'prop-types';
@@ -19,7 +20,7 @@ class Application extends React.Component {
                 else {  return (
                                   <div>
                                       <h1 key={this.props.data.application._id}>{this.props.data.application.name}</h1>
-
+                                      <h1>{this.props.data.application.mongodb.name}</h1>
                                   </div>
                                 );
                     }
@@ -30,6 +31,9 @@ query Application {
     application {
         _id
         name
+        mongodb {
+          name
+        }
     }
 }
 `
