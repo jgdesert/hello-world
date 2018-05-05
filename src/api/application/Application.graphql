@@ -1,0 +1,18 @@
+type Idee {
+     _id: String
+    name: String
+}
+type IdeeMongo {
+     _id: String
+    name: String
+}
+type Info {
+    name: String
+}
+
+type Application {
+  _id: String
+  appInfo: Info
+  ideesInline: [Idee]
+  ideesMongo: [IdeeMongo]
+}
