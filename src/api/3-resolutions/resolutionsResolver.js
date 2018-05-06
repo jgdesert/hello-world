@@ -2,9 +2,8 @@ import Resolutions from "./resolutions";
 
 export default {
    Query: {
-    resolutions(obj,args,{ userId }){
-      console.log("UserId :", userId);
-
+    resolutions(obj,args, {userId = null} ){
+      console.log("userId context option:",userId);
       return Resolutions.find({
         userId
       }).fetch();

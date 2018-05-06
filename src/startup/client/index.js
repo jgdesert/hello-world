@@ -16,7 +16,7 @@ import App from "../../clientWeb/App"
 const httpLink = new HttpLink({
   uri: Meteor.absoluteUrl('graphql')
 });
-
+//acces login token => access token in Resolvers.js
 const authLink = new ApolloLink((operation,forward) => {
   const token = Accounts._storedLoginToken();
   operation.setContext(() => ({
@@ -30,7 +30,7 @@ const authLink = new ApolloLink((operation,forward) => {
 //create du cache
 const cache = new InMemoryCache();
 
-//creation client ApolloClient + function qui accecpte un objet 'link' et 'cache'
+//creation client ApolloClient
 const client = new ApolloClient({
   link: from([authLink, httpLink]),
   cache

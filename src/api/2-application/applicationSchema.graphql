@@ -1,10 +1,12 @@
 type Application {
   _id: String
   name: String
-  mongodb: Mongo
+  inlinedata: Inline
+  inlinedataArray: [Inline]
+  mongodata: [Inline]
 }
 
-type Mongo {
+type Inline {
   _id: String
   name: String
 }

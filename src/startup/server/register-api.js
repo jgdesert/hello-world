@@ -1,4 +1,4 @@
-//ssssssssssssssesssssssssss
+//sssssssssssssssssssssssssssssssssssssesd sssssssssssssesssssssssssssss
 import { createApolloServer } from 'meteor/apollo';
 import { makeExecutableSchema} from 'graphql-tools';
 
@@ -7,7 +7,6 @@ const RootApiSchema = `
   type Query {
     rootApi: String
     application: Application
-    mongodb: Mongo
     resolutions: [Resolution]
   }
 `;

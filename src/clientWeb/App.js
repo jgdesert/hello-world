@@ -9,16 +9,7 @@ import ResolutionForm from './components/Resolutions/ResolutionForm';
 import UserForm from './components/UserForm/UserForm';
 import Application from './components/Application/Application';
 
-// rootTag Graphql
-const rootTag = gql`
-query App {
-  rootApi
-  resolutions {
-    _id
-    name
-  }
-}
-`
+
 // Component ROOT App
 const App = ( {loading, rootApi , resolutions, client} ) => {
   if (loading) return null;
@@ -43,7 +34,16 @@ const App = ( {loading, rootApi , resolutions, client} ) => {
     </div>
   );
 }
-
+// rootTag Graphql
+const rootTag = gql`
+query App {
+  rootApi
+  resolutions {
+    _id
+    name
+  }
+}
+`
 export default graphql(rootTag, {
   props: ({data}) => ({...data })
 })(withApollo(App));
